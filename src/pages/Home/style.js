@@ -29,8 +29,51 @@ export const Logo = styled.section`
 `;
 
 export const Main = styled.main`
-    width: 23.438rem;
-    height: 15rem;
-    height: 5rem;
+    width: 100vw;
+    height: 50.6rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: ${theme.white};
+
+`
+
+export const SectionBill = styled.section`
+    width: 20rem;
+    height: 3.5rem;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const Title = styled.h3`
+    width: 20rem;
+    height: 1.2rem;
+    border: 1px solid green;
+    color: ${theme.darkgrayishCyan};
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 1rem;
+
+`
+
+export const SectionTip = styled.section`
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid yellow;
+    
+`
+
+export const Button = styled.button`
+    width: 9rem;
+    height: 3rem;
+    background-color: ${theme.veryDarkCyan};
+    color: ${theme.white};
+    border-radius: .3rem;
+    border: none;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    
 `
