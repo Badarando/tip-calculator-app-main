@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-const theme = {
+export const theme = {
         strongCyan: 'hsl(172, 67%, 45%)',
         veryDarkCyan: 'hsl(183, 100%, 15%)',
         darkgrayishCyan: 'hsl(186, 14%, 43%)',
@@ -11,16 +11,26 @@ const theme = {
         white: 'hsl(0, 0%, 100%)'
 }
 
-export const Title = styled.h1`
-    color: ${theme.strongCyan};
-    font-size: ${props => `${props.fontSize}px`};
+export const Logo = styled.section`
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    margin-top: 2.5rem;
+    background-image: url('../../images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid red;
 
-    span {
-        font-size: 12px;
+    @media (min-width: 23.5rem) {
+        border: 1px solid yellow;
     }
+
 `;
 
-export const TitleSmall = styled(Title)`
-    color: #00FF;
-    font-size: 16px;
-`;
+export const Main = styled.main`
+    width: 23.438rem;
+    height: 15rem;
+    height: 5rem;
+    background-color: ${theme.white};
+`

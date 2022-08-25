@@ -1,15 +1,11 @@
-import { Title, TitleSmall } from './style';
+import React from 'react';
+import { Logo, Main } from './style';
 
 export function Home() {
   return (
     <>
-      <Title fontSize={30}>
-        funcionando tudo bb
-        <span>texto menor</span>
-      </Title>
-
-      <TitleSmall>Menor</TitleSmall>
-      <TitleSmall>OIR</TitleSmall>
+      <Logo></Logo>
+      <Main></Main>
     </>
   )
 }
