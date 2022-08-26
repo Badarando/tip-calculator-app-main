@@ -51,7 +51,6 @@ export const SectionBill = styled.section`
 export const Title = styled.h3`
     width: 20rem;
     height: 1.2rem;
-    border: 1px solid green;
     color: ${theme.darkgrayishCyan};
     font-family: 'Space Mono', monospace;
     margin-bottom: 1rem;
@@ -79,3 +78,57 @@ export const Button = styled.button`
     font-size: 1.5rem;
     
 `;
+
+export const SectionAmount = styled.section`
+    width: 20rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const SectionResult = styled.section`
+    width: 20rem;
+    height: 16rem;
+    background-color: ${theme.veryDarkCyan};
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: .8rem;
+    row-gap: 0px;
+`
+
+export const Div = styled.div`
+    width: 8rem; 
+    height: 4rem;
+    padding-left: .8rem;
+`
+
+export const TipAmount = styled(Title)`
+    width: 7.6rem;
+    height: 3rem;
+    color: ${theme.white};
+
+    span {
+        color: ${theme.grayishCyan};
+        font-size: 1rem;
+    }
+`
+
+export const TipValue = styled.h1`
+    font-family: 'Space Mono', monospace;
+    color: ${theme.strongCyan};
+    text-align: right;
+`
+
+export const Reset = styled(Button)`
+    width: 17rem;
+    margin: auto;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+    background-color: ${theme.strongCyan};
+    color: ${theme.veryDarkCyan};    
+`

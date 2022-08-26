@@ -44,5 +44,8 @@ input::placeholder {
     background-image: none;
 }
 
+.amount {
+    background-image: url('../images/icon-person.svg');
+}
 
 `
