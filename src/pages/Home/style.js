@@ -46,7 +46,7 @@ export const SectionBill = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+`;
 
 export const Title = styled.h3`
     width: 20rem;
@@ -55,18 +55,20 @@ export const Title = styled.h3`
     color: ${theme.darkgrayishCyan};
     font-family: 'Space Mono', monospace;
     margin-bottom: 1rem;
-
-`
+`;
 
 export const SectionTip = styled.section`
     width: 20rem;
-    height: 20rem;
+    height: 13rem;
     border: 1px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
     
-`
+`;
 
 export const Button = styled.button`
-    width: 9rem;
+    width: 9.5rem;
     height: 3rem;
     background-color: ${theme.veryDarkCyan};
     color: ${theme.white};
@@ -76,4 +78,4 @@ export const Button = styled.button`
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
     
-`
+`;

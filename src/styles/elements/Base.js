@@ -7,14 +7,21 @@ body {
 }
 
 input {
-    width: 18rem;
+    width: 17rem;
     height: 3rem;
+    padding-right: 1rem;
     background-color: ${theme.veryLightGrayishCyan};
     background-image: url(../images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 5% center;
     border-radius: .4rem;
     border: none;
+
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: ${theme.veryDarkCyan};
+    font-size: 1.5rem;
+    
 }
 
 input::placeholder {
@@ -26,4 +33,16 @@ input::placeholder {
     &:focus {
         outline: 1px solid ${theme.strongCyan};
     }
+
+.custom {
+    width: 8rem;
+    height: 3rem;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: ${theme.veryDarkCyan};
+    font-size: 1.5rem;
+    background-image: none;
+}
+
+
 `

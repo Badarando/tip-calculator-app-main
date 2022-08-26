@@ -17,6 +17,7 @@ export function Home() {
           <Button>15%</Button>
           <Button>25%</Button>
           <Button>50%</Button>
+          <input class="custom" type="text" placeholder="Custom" />
         </SectionTip>
       </Main>
       
