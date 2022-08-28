@@ -16,36 +16,67 @@ export const Logo = styled.section`
     height: 5rem;
     margin: auto;
     margin-top: 2.5rem;
+    margin-bottom: 1rem;
     background-image: url('../../images/logo.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    border: 1px solid red;
 
-    @media (min-width: 23.5rem) {
-        border: 1px solid yellow;
+    @media (min-width: 75rem) {
+        width: 6rem;
+        margin-bottom: 6rem;
     }
 
 `;
 
 export const Main = styled.main`
-    width: 100vw;
-    height: 50.6rem;
+    width: 23.438rem;
+    height: 49.8rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 2rem 2rem 0 0;
     background-color: ${theme.white};
 
+    @media (min-width: 75rem) {
+        width: 55rem;
+        height: 30rem;
+        border-radius: 2rem;
+        flex-direction: row;
+    }
+`
+
+export const SectionData = styled.section`
+
+    @media (min-width: 75rem) {
+            width: 23.438rem;
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 25.5rem;
+            width: 30rem;
+            border: 1px solid purple;
+            
+        }
+`
+
+export const SectionDataResult = styled.section`       
+    @media (min-width: 75rem) {
+        width: 27rem;
+        height: 19rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 26rem;
+        
+    }
 `
 
 export const SectionBill = styled.section`
     width: 20rem;
     height: 3.5rem;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 `;
 
 export const Title = styled.h3`
@@ -57,12 +88,18 @@ export const Title = styled.h3`
 `;
 
 export const SectionTip = styled.section`
-    width: 20rem;
+    width: 22.5rem;
     height: 13rem;
-    border: 1px solid yellow;
     display: flex;
     flex-wrap: wrap;
     column-gap: 1rem;
+    border: 1px solid red;
+
+    @media (min-width: 75rem) {
+        width: 24rem;
+        column-gap: 1rem;
+        row-gap: .4rem;
+    }
     
 `;
 
@@ -76,6 +113,10 @@ export const Button = styled.button`
 
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
+
+    @media (min-width: 75rem) {
+        width: 7rem;
+    }
     
 `;
 
@@ -83,10 +124,6 @@ export const SectionAmount = styled.section`
     width: 20rem;
     height: 4rem;
     margin-bottom: 1rem;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 `
 
 export const SectionResult = styled.section`
@@ -99,12 +136,23 @@ export const SectionResult = styled.section`
     flex-wrap: wrap;
     column-gap: .8rem;
     row-gap: 0px;
+
+    @media (min-width: 75rem) {
+        height: 26rem;
+        width: 23.438rem;
+        align-content: flex-start;
+        column-gap: 2.5rem;
+    }
 `
 
 export const Div = styled.div`
     width: 8rem; 
     height: 4rem;
     padding-left: .8rem;
+
+    @media (min-width: 75rem) {
+        margin-top: 1rem;
+    }
 `
 
 export const TipAmount = styled(Title)`
@@ -130,5 +178,10 @@ export const Reset = styled(Button)`
     text-transform: uppercase;
     margin-bottom: 1.4rem;
     background-color: ${theme.strongCyan};
-    color: ${theme.veryDarkCyan};    
+    color: ${theme.veryDarkCyan};
+    
+    @media (min-width: 75rem) {
+        margin-top: 11rem;
+        margin-bottom: 0;
+    }
 `

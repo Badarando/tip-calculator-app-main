@@ -7,7 +7,7 @@ body {
 }
 
 input {
-    width: 17rem;
+    width: 18.5rem;
     height: 3rem;
     padding-right: 1rem;
     background-color: ${theme.veryLightGrayishCyan};
@@ -42,6 +42,10 @@ input::placeholder {
     color: ${theme.veryDarkCyan};
     font-size: 1.5rem;
     background-image: none;
+
+    @media (min-width: 75rem) {
+        width: 5.8rem;
+    }
 }
 
 .amount {
