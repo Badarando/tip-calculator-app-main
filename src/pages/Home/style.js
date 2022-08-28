@@ -57,12 +57,11 @@ export const SectionData = styled.section`
             align-items: center;
             height: 25.5rem;
             width: 30rem;
-            border: 1px solid purple;
             
         }
 `
 
-export const SectionDataResult = styled.section`       
+export const SectionDataResult = styled.section`
     @media (min-width: 75rem) {
         width: 27rem;
         height: 19rem;
@@ -77,6 +76,11 @@ export const SectionDataResult = styled.section`
 export const SectionBill = styled.section`
     width: 20rem;
     height: 3.5rem;
+
+    @media (min-width: 75rem) {
+        align-self: flex-start;
+        margin-left: 2rem;
+    }
 `;
 
 export const Title = styled.h3`
@@ -84,16 +88,21 @@ export const Title = styled.h3`
     height: 1.2rem;
     color: ${theme.darkgrayishCyan};
     font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
+
+    @media (min-width: 75rem) {
+    width: 25rem;
+    }
 `;
 
 export const SectionTip = styled.section`
-    width: 22.5rem;
+    width: 20rem;
     height: 13rem;
     display: flex;
     flex-wrap: wrap;
     column-gap: 1rem;
-    border: 1px solid red;
 
     @media (min-width: 75rem) {
         width: 24rem;
@@ -124,6 +133,11 @@ export const SectionAmount = styled.section`
     width: 20rem;
     height: 4rem;
     margin-bottom: 1rem;
+
+    @media (min-width: 75rem) {
+        align-self: flex-start;
+        margin-left: 2rem;
+    }
 `
 
 export const SectionResult = styled.section`
@@ -183,5 +197,9 @@ export const Reset = styled(Button)`
     @media (min-width: 75rem) {
         margin-top: 11rem;
         margin-bottom: 0;
+
+        &:active {
+            background-color: ${theme.lightGrayishCyan};
+        }
     }
 `

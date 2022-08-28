@@ -9,7 +9,7 @@ export function Home() {
         <SectionData>
           <Title>Bill</Title>
           <SectionBill>
-            <input type="text" placeholder="0"/>
+                <input type="text" placeholder="0"/>
           </SectionBill>
           <Title>Select Tip %</Title>
           <SectionTip>

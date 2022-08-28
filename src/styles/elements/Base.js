@@ -21,6 +21,10 @@ input {
     font-family: 'Space Mono', monospace;
     color: ${theme.veryDarkCyan};
     font-size: 1.5rem;
+
+    @media (min-width: 75rem) {
+    width: 24rem;
+    }
     
 }
 
