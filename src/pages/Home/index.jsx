@@ -2,6 +2,19 @@ import React from 'react';
 import { Logo, Main, SectionBill, Title, SectionTip, Button, SectionAmount, SectionResult, Div, TipAmount, TipValue, Reset, SectionData, SectionDataResult } from './style';
 
 export function Home() {
+  let billValue = '';
+  let numPeople = '';
+
+  function bill(value) {
+    billValue = value;
+    console.log(billValue);
+  }
+
+  function people(value) {
+    numPeople = value;
+    console.log(numPeople);
+  }
+
   return (
     <>
       <Logo></Logo>
@@ -9,7 +22,7 @@ export function Home() {
         <SectionData>
           <Title>Bill</Title>
           <SectionBill>
-                <input type="text" placeholder="0"/>
+                <input type="text" placeholder="0" onChange={ e => bill(e.target.value)}/>
           </SectionBill>
           <Title>Select Tip %</Title>
           <SectionTip>
@@ -18,11 +31,11 @@ export function Home() {
             <Button>15%</Button>
             <Button>25%</Button>
             <Button>50%</Button>
-            <input class="custom" type="text" placeholder="Custom" />
+            <input class="custom" type="text" placeholder="Custom"/>
           </SectionTip>
           <Title>Number of People</Title>
           <SectionAmount>
-          <input class="amount" type="text" placeholder="0"/>
+          <input class="amount" type="text" placeholder="0" onChange={ e => people(e.target.value)}/>
           </SectionAmount>
         </SectionData>
         <SectionDataResult>
