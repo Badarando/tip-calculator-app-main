@@ -20,11 +20,12 @@ export function Home() {
   //   numCustom = value;
   //   console.log(numCustom);
   // }
-  // const [billValue, setBillValue] = useState()
-  // const [people, setPeople] = useState()
-  // const [custom, setCustom] = useState()
+  const [billValue, setBillValue] = useState()
+  const [people, setPeople] = useState()
+  const [custom, setCustom] = useState()
 
-  // const [total = billValue / people , setTotal] = useState()
+  const [total = billValue / people, setTotal] = useState("")
+
 
   return (
     <>
@@ -33,7 +34,7 @@ export function Home() {
         <SectionData>
           <Title>Bill</Title>
           <SectionBill>
-                <input type="text" placeholder="0" onChange={ e => setBillValue(e.target.value)}/>
+                <input type="text" placeholder="0" onChange={e => setBillValue(e.target.value)}/>
           </SectionBill>
           <Title>Select Tip %</Title>
           <SectionTip>
@@ -42,11 +43,11 @@ export function Home() {
             <Button>15%</Button>
             <Button>25%</Button>
             <Button>50%</Button>
-            <input class="custom" type="text" placeholder="Custom" onChange={e => setCustom(e.target.value)}/>
+            <input class="custom" type="text" placeholder="Custom"/>
           </SectionTip>
           <Title>Number of People</Title>
           <SectionAmount>
-          <input class="amount" type="text" placeholder="0" onChange={ e => setPeople(e.target.value)}/>
+          <input class="amount" type="text" placeholder="0" onChange={e => setPeople(e.target.value)}/>
           </SectionAmount>
         </SectionData>
         <SectionDataResult>
@@ -55,7 +56,7 @@ export function Home() {
               <TipAmount>Tip Amount <span>/ person</span></TipAmount>
             </Div>
             <Div>
-              <TipValue>$</TipValue>
+              <TipValue>${total}</TipValue>
             </Div>
             <Div>
               <TipAmount>Total <span>/ person</span></TipAmount>
