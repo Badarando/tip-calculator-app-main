@@ -1,27 +1,7 @@
-import React, { useState} from 'react';
+import React from 'react';
 import { Logo, Main, SectionBill, Title, SectionTip, Button, SectionAmount, SectionResult, Div, TipAmount, TipValue, Reset, SectionData, SectionDataResult } from './style';
 
 export function Home() {
-  // let billValue = '';
-  // let numPeople = '';
-  // let numCustom = '';
-
-  // function bill(value) {
-  //   billValue = value;
-  //   console.log(billValue);
-  // }
-
-  // function people(value) {
-  //   numPeople = value;
-  //   console.log(numPeople);
-  // }
-
-  // function custom(value) {
-  //   numCustom = value;
-  //   console.log(numCustom);
-  // }
-
-
   return (
     <>
       <Logo></Logo>
@@ -29,7 +9,7 @@ export function Home() {
         <SectionData>
           <Title>Bill</Title>
           <SectionBill>
-                <input type="text" placeholder="0" onChange={e => setBillValue(e.target.value)}/>
+                <input type="text" placeholder="0"/>
           </SectionBill>
           <Title>Select Tip %</Title>
           <SectionTip>
@@ -42,7 +22,7 @@ export function Home() {
           </SectionTip>
           <Title>Number of People</Title>
           <SectionAmount>
-          <input class="amount" type="text" placeholder="0" onChange={e => setPeople(e.target.value)}/>
+          <input class="amount" type="text" placeholder="0"/>
           </SectionAmount>
         </SectionData>
         <SectionDataResult>
