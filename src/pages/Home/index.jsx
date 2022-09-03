@@ -20,11 +20,6 @@ export function Home() {
   //   numCustom = value;
   //   console.log(numCustom);
   // }
-  const [billValue, setBillValue] = useState()
-  const [people, setPeople] = useState()
-  const [custom, setCustom] = useState()
-
-  const [total = billValue / people, setTotal] = useState("")
 
 
   return (
