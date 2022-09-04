@@ -2,29 +2,28 @@ import React, { useState} from 'react';
 import { Logo, Main, SectionBill, Title, SectionTip, Button, SectionAmount, SectionResult, Div, TipAmount, TipValue, Reset, SectionData, SectionDataResult } from './style';
 
 export function Home() {
-  // let billValue = '';
-  // let numPeople = '';
-  // let numCustom = '';
+  
+  const [bill, setBill] = useState(0)
+  const [people, setPeople] = useState(0)
 
-  // function bill(value) {
-  //   billValue = value;
-  //   console.log(billValue);
-  // }
+  const tip = (total) => {
+    total(total = bill / people)
+  };
 
-  // function people(value) {
-  //   numPeople = value;
-  //   console.log(numPeople);
-  // }
+  const [total, setTotal] = useState(0)
 
-  // function custom(value) {
-  //   numCustom = value;
-  //   console.log(numCustom);
-  // }
-  // const [billValue, setBillValue] = useState()
-  // const [people, setPeople] = useState()
-  // const [custom, setCustom] = useState()
 
-  // const [total = billValue / people , setTotal] = useState()
+  console.log(tip)
+
+  let billValue = '';
+  let numPeople = '';
+  let numCustom = '';
+
+  function custom(value) {
+    numCustom = value;
+    console.log(numCustom);
+  }
+ 
 
   return (
     <>
@@ -33,7 +32,7 @@ export function Home() {
         <SectionData>
           <Title>Bill</Title>
           <SectionBill>
-                <input type="text" placeholder="0" onChange={ e => setBillValue(e.target.value)}/>
+                <input type="text" placeholder="0" onChange={ e => setBill(e.target.value)}/>
           </SectionBill>
           <Title>Select Tip %</Title>
           <SectionTip>
@@ -42,7 +41,7 @@ export function Home() {
             <Button>15%</Button>
             <Button>25%</Button>
             <Button>50%</Button>
-            <input class="custom" type="text" placeholder="Custom" onChange={e => setCustom(e.target.value)}/>
+            <input class="custom" type="text" placeholder="Custom" onChange={e => custom(e.target.value)}/>
           </SectionTip>
           <Title>Number of People</Title>
           <SectionAmount>
@@ -55,7 +54,7 @@ export function Home() {
               <TipAmount>Tip Amount <span>/ person</span></TipAmount>
             </Div>
             <Div>
-              <TipValue>$</TipValue>
+              <TipValue>${total}</TipValue>
             </Div>
             <Div>
               <TipAmount>Total <span>/ person</span></TipAmount>
