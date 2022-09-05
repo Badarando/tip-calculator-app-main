@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 import { Logo, Main, SectionBill, Title, SectionTip, Button, SectionAmount, SectionResult, Div, TipAmount, TipValue, Reset, SectionData, SectionDataResult } from './style';
 
 export function Home() {
@@ -45,7 +45,7 @@ export function Home() {
           </SectionTip>
           <Title>Number of People</Title>
           <SectionAmount>
-          <input class="amount" type="text" placeholder="0" onChange={ e => setPeople(e.target.value)}/>
+          <input class="amount" type="text" placeholder="0"/>
           </SectionAmount>
         </SectionData>
         <SectionDataResult>
@@ -54,7 +54,7 @@ export function Home() {
               <TipAmount>Tip Amount <span>/ person</span></TipAmount>
             </Div>
             <Div>
-              <TipValue>${total}</TipValue>
+              <TipValue>${total}{total}</TipValue>
             </Div>
             <Div>
               <TipAmount>Total <span>/ person</span></TipAmount>
