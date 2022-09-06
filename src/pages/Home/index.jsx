@@ -1,29 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Logo, Main, SectionBill, Title, SectionTip, Button, SectionAmount, SectionResult, Div, TipAmount, TipValue, Reset, SectionData, SectionDataResult } from './style';
 
 export function Home() {
   
-  const [bill, setBill] = useState(0)
-  const [people, setPeople] = useState(0)
+  const [bill, setBill] = useState()
+  const [people, setPeople] = useState()
+  const [total, setTotal] = useState(() => {
+    return 0
+  })
 
-  const tip = (total) => {
-    total(total = bill / people)
-  };
-
-  const [total, setTotal] = useState(0)
-
-
-  console.log(tip)
-
-  let billValue = '';
-  let numPeople = '';
-  let numCustom = '';
-
-  function custom(value) {
-    numCustom = value;
-    console.log(numCustom);
-  }
- 
+  useEffect(() => {
+    if(bill != null && people != null){
+      setTotal(bill / people)
+    }
+  }, [bill, people])
+  
+  console.log(bill, people, total)
 
   return (
     <>
@@ -32,7 +24,7 @@ export function Home() {
         <SectionData>
           <Title>Bill</Title>
           <SectionBill>
-                <input type="text" placeholder="0" onChange={ e => setBill(e.target.value)}/>
+                <input type="text" placeholder="0" onChange={ e => setBill(e.target.value)} value={bill}/>
           </SectionBill>
           <Title>Select Tip %</Title>
           <SectionTip>
@@ -45,7 +37,7 @@ export function Home() {
           </SectionTip>
           <Title>Number of People</Title>
           <SectionAmount>
-          <input class="amount" type="text" placeholder="0"/>
+          <input class="amount" type="text" placeholder="0" onChange={ e => setPeople(e.target.value)}  value={people}/>
           </SectionAmount>
         </SectionData>
         <SectionDataResult>
@@ -54,7 +46,7 @@ export function Home() {
               <TipAmount>Tip Amount <span>/ person</span></TipAmount>
             </Div>
             <Div>
-              <TipValue>${total}{total}</TipValue>
+              <TipValue>${total}</TipValue>
             </Div>
             <Div>
               <TipAmount>Total <span>/ person</span></TipAmount>
